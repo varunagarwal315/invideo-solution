@@ -3,7 +3,10 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import vuetify from './plugins/vuetify';
+// import vueKonva from './plugins/konva';
+import VueKonva from 'vue-konva'
 
+Vue.use(VueKonva, { prefix: 'K'});
 Vue.config.productionTip = false
 
 new Vue({
