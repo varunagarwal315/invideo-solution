@@ -11,11 +11,6 @@ Vue.use(VueRouter)
     path: '/scroll-page',
     name: 'ScrollPage',
     component: ScrollPage
-  },
-  {
-    path: '/cavas',
-    name: 'CanvasPage',
-    component: () => import('../pages/CanvasPage.vue')
   }
 ]
 

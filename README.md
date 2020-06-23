@@ -14,7 +14,7 @@ npm run serve
 - Vue.Js has been used with classes and decorators
 - `vue-router` has been used to load the canvas page onto `index.html`
 - Primary code has not been split into reusable components
-- Images from Piscum are 800kb and massive resolution so it takes some time to load
+- Images from Piscum are 800kb and much larger resolution so it takes some time to load and might cause lag
 - Kona has been used for canvas manipulation
 - Images are resized to best fit the canvas depending on the aspect ratios
 - User has to select the image and drag-drop on the canvas
@@ -29,3 +29,4 @@ image.draggable(false);
 - Efficient image caching has not been done
 - When images are blurred the offset and cropping has not been set as the ReadMe.md doesn't specify. To enable it uncomment `image.position(stage.getPointerPosition());` to get the `(x, y)` offset based on where the mouse was when the image was dropped
 - Downloading image isn't yet implemented
+- Can optimize the image loading process and use `bulkDraw`

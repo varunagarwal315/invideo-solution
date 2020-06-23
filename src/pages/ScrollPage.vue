@@ -83,18 +83,18 @@ export default class ScrollPage extends Vue {
   }
 
   public redrawCanvas() {
+    this.progressMsg = `Downloading image - ${this.selectedImg}`;
     if (!this.selectedImg) {
       console.log('blank canvas...');
       return;
     }
     this.clearCanvas();
     this.drawBlurredImg();
-    this.progressMsg = `Completed - ${this.selectedImg}`;
   }
 
   public drawPrimaryImage() {
+    this.progressMsg = `Resizing original image - ${this.selectedImg}`;
     Konva.Image.fromURL(this.selectedImg, (image: any) => {
-      this.progressMsg = `Resizing original image - ${this.selectedImg}`;
       this.layer.add(image);
       let width = image.getAttr('width');
       let height = image.getAttr('height');
@@ -147,7 +147,7 @@ export default class ScrollPage extends Vue {
       this.loadedImages.push(image);
       // image.position(stage.getPointerPosition());
       image.draggable(false);
-      this.layer.draw();
+      // this.layer.draw();
       this.drawPrimaryImage();
     });
   }
